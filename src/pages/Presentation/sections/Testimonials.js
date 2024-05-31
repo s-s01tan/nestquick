@@ -38,13 +38,15 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">Trusted by over</MKTypography>
+          <MKTypography variant="h2">Trusted by</MKTypography>
           <MKTypography variant="h2" color="info" textGradient mb={2}>
-            1,679,477+ web developers
+            Node.js Backend & Web Developers
           </MKTypography>
           <MKTypography variant="body1" color="text" mb={2}>
-            Many Fortune 500 companies, startups, universities and governmental
-            institutions love Creative Tim&apos;s products.
+            We prioritize the unique needs of Node.js developers, fostering
+            trust through consistent delivery of high-quality tools, resources,
+            and support, ultimately enabling them to elevate their projects to
+            new heights of success.
           </MKTypography>
         </Grid>
         <Grid container spacing={3} sx={{ mt: 8 }}>
