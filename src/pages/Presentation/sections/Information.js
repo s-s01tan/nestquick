@@ -21,16 +21,14 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
-import RotatingCard from "examples/Cards/RotatingCard";
-import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
-import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+import RotatingCard from "examples/Cards/RotatingCard";
+import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
+import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
-
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 
 function Information() {
   return (
