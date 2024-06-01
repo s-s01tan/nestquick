@@ -84,7 +84,7 @@ export default {
           href: "mailto: soltanlisoltan.js@gmail.com",
         },
         {
-          name: "Phone Number",
+          name: "Call Me",
           href: "tel:+18056562479",
         },
         {

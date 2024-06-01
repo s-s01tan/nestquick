@@ -31,6 +31,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import { LinkedIn } from "@mui/icons-material";
+import YouTube from "@mui/icons-material/YouTube";
 
 function CenteredFooter({ company, links, socials, light }) {
   const { href, name } = company;
@@ -78,24 +80,20 @@ function CenteredFooter({ company, links, socials, light }) {
           </Stack>
         </Grid>
         <Grid item xs={12} lg={8}>
-          <Stack display="flex" direction="row" justifyContent="center" spacing={3} mt={1} mb={3}>
+          <Stack
+            display="flex"
+            direction="row"
+            justifyContent="center"
+            spacing={3}
+            mt={1}
+            mb={3}
+          >
             {renderSocials}
           </Stack>
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <MKTypography variant="body2" color={light ? "white" : "secondary"}>
-            Copyright &copy; {year} Material by{" "}
-            <MKTypography
-              component={Link}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              variant="body2"
-              color={light ? "white" : "secondary"}
-            >
-              {name}
-            </MKTypography>
-            .
+            All rights reserved. Thank you Creative Tim. Regards, s01tan ❤️
           </MKTypography>
         </Grid>
       </Grid>
@@ -105,30 +103,35 @@ function CenteredFooter({ company, links, socials, light }) {
 
 // Setting default values for the props of CenteredFooter
 CenteredFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "/nestquick", name: "NestQuick" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Company" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/presentation", name: "Team" },
-    { href: "https://www.creative-tim.com/templates/react", name: "Products" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "/nestquick", name: "Homepage" },
+    {
+      name: "Email",
+      href: "mailto: soltanlisoltan.js@gmail.com",
+    },
+    {
+      name: "Call Me",
+      href: "tel:+18056562479",
+    },
   ],
   socials: [
-    { icon: <FacebookIcon fontSize="small" />, link: "https://www.facebook.com/CreativeTim/" },
     {
-      icon: <TwitterIcon fontSize="small" />,
-      link: "https://twitter.com/creativetim",
+      icon: <LinkedIn fontSize="small" />,
+      link: "https://www.linkedin.com/in/s-s01tan/",
+    },
+    {
+      icon: <GitHubIcon fontSize="small" />,
+      link: "https://github.com/s-s01tan/nestquick/",
     },
     {
       icon: <InstagramIcon fontSize="small" />,
-      link: "https://www.instagram.com/creativetimofficial/",
+      link: "https://www.instagram.com/s01tan/",
     },
     {
-      icon: <PinterestIcon fontSize="small" />,
-      link: "https://ro.pinterest.com/thecreativetim/",
+      icon: <YouTube fontSize="small" />,
+      link: "https://www.youtube.com/@soltechno",
     },
-    { icon: <GitHubIcon fontSize="small" />, link: "https://github.com/s-s01tan/nestquick" },
   ],
   light: false,
 };

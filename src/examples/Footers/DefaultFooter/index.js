@@ -29,7 +29,6 @@ import MKTypography from "components/MKTypography";
 
 function DefaultFooter({ content }) {
   const { brand, socials, menus, copyright } = content;
-  console.log(brand);
   return (
     <MKBox component="footer">
       <Container>

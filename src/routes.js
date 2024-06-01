@@ -45,12 +45,12 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import SignIn from "layouts/pages/authentication/sign-in";
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import Author from "layouts/pages/landing-pages/author";
-import ContactUs from "layouts/pages/landing-pages/contact-us";
 
 // Sections
 
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
+import SingleGeneratorForm from "layouts/sections/generators/generator-forms";
 
 const routes = [
   {
@@ -70,7 +70,18 @@ const routes = [
           {
             name: "Controller",
             route: "/pages/custom/controller",
-            component: <ContactUs />,
+            component: (
+              <SingleGeneratorForm
+                value={"Controller"}
+                breadcrumb={[
+                  {
+                    label: "Homepage",
+                    route: "/nestquick",
+                  },
+                  { label: "Controller" },
+                ]}
+              />
+            ),
           },
           {
             name: "Service",

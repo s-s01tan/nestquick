@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // prop-types is a library for type checking of props
 import PropTypes from "prop-types";
@@ -26,15 +26,15 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Grid from "@mui/material/Grid";
 import Slide from "@mui/material/Slide";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
 import MKAlert from "components/MKAlert";
+import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
@@ -86,10 +86,10 @@ function View({ children, code, title, height, ...rest }) {
                       color="dark"
                       mr={1.25}
                       sx={{ fontSize: ({ typography: { size } }) => size.sm }}
-                      className="fas fa-desktop"
+                      className="fas fa-pen"
                     />
                   }
-                  label="Preview"
+                  label="Form"
                 />
                 <Tab
                   icon={
@@ -102,6 +102,25 @@ function View({ children, code, title, height, ...rest }) {
                     />
                   }
                   label="Code"
+                />
+                <Tab
+                  icon={
+                    <MKBox
+                      component="i"
+                      color="dark"
+                      mr={1.25}
+                      sx={{ fontSize: ({ typography: { size } }) => size.sm }}
+                      className="fas fa-download"
+                    />
+                  }
+                  label="Download"
+                  onClick={() => {
+                    window.open(
+                      "/nestquick",
+                      "_blank"
+                    );
+                    setActiveTab(1);
+                  }}
                 />
               </Tabs>
             </AppBar>
@@ -147,9 +166,17 @@ function View({ children, code, title, height, ...rest }) {
                 width="25%"
                 mx="auto"
                 color="success"
-                sx={{ minHeight: "2.5rem !important", py: 1, justifyContent: "center" }}
+                sx={{
+                  minHeight: "2.5rem !important",
+                  py: 1,
+                  justifyContent: "center",
+                }}
               >
-                <MKTypography variant="body2" color="white" fontWeight="regular">
+                <MKTypography
+                  variant="body2"
+                  color="white"
+                  fontWeight="regular"
+                >
                   Code successfully copied!
                 </MKTypography>
               </MKAlert>
